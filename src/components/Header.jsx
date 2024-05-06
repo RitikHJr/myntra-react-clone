@@ -18,7 +18,8 @@ const Header = () => {
         </Link>
       </div>
       <nav className="nav_bar">
-        <a href="#">Men</a>
+        <Link to="/men">Men</Link>
+        {/* <a href="#"></a> */}
         <a href="#">Women</a>
         <a href="#">Kids</a>
         <a href="#">Home & Living</a>
@@ -28,7 +29,7 @@ const Header = () => {
         </a>
       </nav>
       <div className="search_bar">
-        <span class="material-symbols-outlined search_icon">search</span>
+        <span className="material-symbols-outlined search_icon">search</span>
         <input
           className="search_input"
           placeholder="Search for products, brands and more"

@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Bag from "./routes/Bag.jsx";
 import Home from "./routes/Home.jsx";
+import Men from "./routes/Men.jsx";
 import { Provider } from "react-redux";
 import myntraStore from "./store/index.js";
 
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       { path: "/", element: <Home /> },
+      { path: "/men", element: <Men /> },
       {
         path: "/bag",
         element: <Bag />,
