@@ -20,6 +20,7 @@ header {
   margin-left: 4%;
 }
 .action_bar {
+  align-items: center;
   margin-right: 4%;
 }
 .nav_bar {
@@ -82,6 +83,16 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: black;
+}
+
+.menu-icon {
+  font-size: 5vh;
+  display: none;
+}
+
+.bag_link_container {
+  margin-top: 2.4vh;
 }
 
 /* Main section */
@@ -384,4 +395,57 @@ a.action_container:link {
 
 .spinner {
   margin: 100px 0px;
+}
+
+/* --- media query ---- */
+
+@media (max-width: 1250px) {
+  .search_input {
+    padding: 0 10px;
+    width: 3%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .nav_bar {
+    display: none;
+  }
+  .search_bar {
+    margin: 0 33px;
+  }
+  header {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 650px) {
+  .search_bar {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .action_bar .action_container {
+    display: none;
+  }
+
+  header {
+    justify-content: space-between;
+  }
+
+  .menu-icon {
+    margin-right: 20px;
+  }
+
+  .item-container {
+    width: 380px;
+  }
+}
+
+@media (max-width: 450px) {
+  #footer_3 {
+    display: none;
+  }
 }

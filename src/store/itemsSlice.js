@@ -32,7 +32,7 @@ const itemsSlice = createSlice({
         "id": "003",
         "image": "images/3.jpg",
         "company": "NUEVOSDAMAS",
-        "item_name": "Women Red & White Printed A-Line Knee-Length Skirts",
+        "item_name": "Women Red & White Printed A-Line ",
         "original_price": 1599,
         "current_price": 495,
         "discount_percentage": 69,

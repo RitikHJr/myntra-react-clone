@@ -1,7 +1,9 @@
 import { BsFillPersonFill } from "react-icons/bs";
-import { FaFaceGrinHearts, FaBagShopping } from "react-icons/fa6";
+import { FaFaceGrinHearts } from "react-icons/fa6";
+import { FaShoppingBag } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { IoMdMenu } from "react-icons/io";
 
 const Header = () => {
   const bag = useSelector((store) => store.bag);
@@ -45,13 +47,15 @@ const Header = () => {
           <FaFaceGrinHearts />
           <span className="action_name">Wishlist</span>
         </div>
-
-        <Link className="action_container" to="/bag">
-          <FaBagShopping />
-          <span className="action_name">Bag</span>
-          <span className="bag-item-count">{bag.length}</span>
-        </Link>
+        <div className="bag_link_container">
+          <Link className="action_container" to="/bag">
+            <FaShoppingBag />
+            <span className="action_name">Bag</span>
+            <span className="bag-item-count">{bag.length}</span>
+          </Link>
+        </div>
       </div>
+      <IoMdMenu className="menu-icon" />
     </header>
   );
 };
