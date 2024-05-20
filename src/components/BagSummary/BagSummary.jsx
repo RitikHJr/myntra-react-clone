@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import "./BagSummary.css";
 
 const BagSummary = () => {
   const bagItemIds = useSelector((state) => state.bag);

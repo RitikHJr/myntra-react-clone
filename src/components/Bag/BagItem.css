@@ -1,0 +1,43 @@
+@media (max-width: 1000px) {
+  .item-name {
+    width: 22vw;
+  }
+}
+
+@media (max-width: 700px) {
+  .bag-item-img {
+    width: 14vw;
+  }
+
+  .item-left-part {
+    background: white;
+  }
+
+  .item-right-part {
+    margin-left: 14vw;
+  }
+
+  .bag-items-container {
+    display: inline;
+  }
+
+  .item-name {
+    width: 80vw;
+  }
+
+  .bag-summary {
+    width: 90%;
+  }
+}
+
+@media (max-width: 570px) {
+  .item-name {
+    width: 30vw;
+  }
+  .item-right-part {
+    margin-bottom: 1px;
+  }
+  .item-right-part {
+    min-height: 100px;
+  }
+}

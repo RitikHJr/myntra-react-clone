@@ -1,5 +1,5 @@
-import BagItem from "../components/BagItem";
-import BagSummary from "../components/BagSummary";
+import BagItem from "../../components/Bag/BagItem";
+import BagSummary from "../../components/BagSummary/BagSummary";
 import { useSelector } from "react-redux";
 
 const Bag = () => {
