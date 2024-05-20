@@ -4,8 +4,11 @@ import { FaShoppingBag } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { IoMdMenu } from "react-icons/io";
+import "./Navbar.css";
+import { useState } from "react";
 
-const Header = () => {
+const Navbar = () => {
+  const [hideActionBar, setHideActionBar] = useState(false);
   const bag = useSelector((store) => store.bag);
 
   return (
@@ -37,12 +40,16 @@ const Header = () => {
           placeholder="Search for products, brands and more"
         />
       </div>
-      <div className="action_bar">
+
+      {/* ---- action bar */}
+
+      <div
+        className={`action_bar  ${hideActionBar ? "hide-mobile-menu" : ""} `}
+      >
         <div className="action_container">
           <BsFillPersonFill />
           <span className="action_name">Profile</span>
         </div>
-
         <div className="action_container">
           <FaFaceGrinHearts />
           <span className="action_name">Wishlist</span>
@@ -55,9 +62,19 @@ const Header = () => {
           </Link>
         </div>
       </div>
-      <IoMdMenu className="menu-icon" />
+      <IoMdMenu
+        className="menu-icon"
+        // onClick={
+        //   hideActionBar ? setHideActionBar(false) : setHideActionBar(true)
+        // }
+        onClick={() => {
+          {
+            hideActionBar ? setHideActionBar(false) : setHideActionBar(true);
+          }
+        }}
+      />
     </header>
   );
 };
 
-export default Header;
+export default Navbar;
